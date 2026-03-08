@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – TrendDrop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#1a1a2e', accent: '#e94560' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-extrabold tracking-tight">Trend<span class="text-accent">Drop</span></a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="../index.html" class="hover:text-accent transition">Home</a></li>
+        <li><a href="shop.html" class="text-accent">Shop</a></li>
+        <li><a href="about.html" class="hover:text-accent transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+      <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="bg-gradient-to-r from-primary to-gray-800 text-white py-16 px-6 text-center">
+    <h1 class="text-4xl font-extrabold mb-2">Our Products</h1>
+    <p class="text-gray-300">Discover our full range of fashion & electronics</p>
+  </div>
+
+  <!-- SHOP LAYOUT -->
+  <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-10">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="w-full lg:w-64 shrink-0">
+      <div class="bg-gray-50 rounded-2xl p-6 sticky top-24">
+        <h3 class="font-bold text-lg text-primary mb-4">Filter by Category</h3>
+        <ul class="space-y-2 text-sm" id="cat-filters">
+          <li><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" value="all" checked class="accent-red-500"/> All Products</label></li>
+          <li><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" value="women" class="accent-red-500"/> Women's Fashion</label></li>
+          <li><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" value="men" class="accent-red-500"/> Men's Fashion</label></li>
+          <li><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" value="electronics" class="accent-red-500"/> Electronics</label></li>
+          <li><label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" value="accessories" class="accent-red-500"/> Accessories</label></li>
+        </ul>
+
+        <hr class="my-6 border-gray-200"/>
+
+        <h3 class="font-bold text-lg text-primary mb-4">Price Range</h3>
+        <input type="range" id="price-range" min="0" max="500" value="500" class="w-full accent-red-500"/>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>$0</span><span id="price-label">$500</span>
+        </div>
+
+        <hr class="my-6 border-gray-200"/>
+
+        <h3 class="font-bold text-lg text-primary mb-4">Sort By</h3>
+        <select id="sort-select" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- PRODUCT GRID -->
+    <main class="flex-1">
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-gray-500 text-sm" id="results-count">Showing all products</p>
+      </div>
+      <div id="shop-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center text-sm mt-10">
+    <p class="text-white font-extrabold text-xl mb-2">Trend<span class="text-accent">Drop</span></p>
+    <p>&copy; 2026 TrendDrop. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/shop.js"></script>
+</body>
+</html>

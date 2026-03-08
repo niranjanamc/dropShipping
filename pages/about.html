@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – TrendDrop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#1a1a2e', accent: '#e94560' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-extrabold tracking-tight">Trend<span class="text-accent">Drop</span></a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="../index.html" class="hover:text-accent transition">Home</a></li>
+        <li><a href="shop.html" class="hover:text-accent transition">Shop</a></li>
+        <li><a href="about.html" class="text-accent">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+      <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="bg-gradient-to-r from-primary to-gray-800 text-white py-20 px-6 text-center">
+    <h1 class="text-4xl font-extrabold mb-3">About TrendDrop</h1>
+    <p class="text-gray-300 max-w-xl mx-auto">We believe everyone deserves access to great style and technology — without breaking the bank.</p>
+  </div>
+
+  <!-- MISSION -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="flex flex-col md:flex-row gap-16 items-center">
+      <div class="flex-1">
+        <span class="text-accent font-semibold text-sm uppercase tracking-widest">Our Mission</span>
+        <h2 class="text-4xl font-extrabold text-primary mt-3 mb-6">Bringing the World's Best Products to Your Doorstep</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          TrendDrop was founded with a simple belief: great products should be accessible to everyone. We partner with trusted suppliers worldwide to bring you premium fashion and electronics at prices that make sense.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Every product in our catalog is handpicked by our team for quality, style, and value. We handle the supply chain complexity so you can focus on what matters — finding the perfect product.
+        </p>
+        <a href="shop.html" class="bg-accent hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition inline-block">Start Shopping</a>
+      </div>
+      <div class="flex-1 grid grid-cols-2 gap-4">
+        <div class="bg-pink-50 rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-5xl mb-3">🌍</div>
+          <h4 class="font-bold text-primary">Global Reach</h4>
+          <p class="text-gray-500 text-sm mt-1">Partners in 30+ countries</p>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-5xl mb-3">✅</div>
+          <h4 class="font-bold text-primary">Quality First</h4>
+          <p class="text-gray-500 text-sm mt-1">Every product vetted by us</p>
+        </div>
+        <div class="bg-purple-50 rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-5xl mb-3">💰</div>
+          <h4 class="font-bold text-primary">Best Prices</h4>
+          <p class="text-gray-500 text-sm mt-1">Direct from manufacturer</p>
+        </div>
+        <div class="bg-yellow-50 rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-5xl mb-3">❤️</div>
+          <h4 class="font-bold text-primary">Customer Love</h4>
+          <p class="text-gray-500 text-sm mt-1">50,000+ happy customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-primary text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="text-4xl font-extrabold text-accent">2020</p>
+        <p class="text-gray-300 text-sm mt-2">Year Founded</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">500+</p>
+        <p class="text-gray-300 text-sm mt-2">Products</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">50K+</p>
+        <p class="text-gray-300 text-sm mt-2">Customers Served</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">30+</p>
+        <p class="text-gray-300 text-sm mt-2">Countries Shipped To</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-primary">Meet the Team</h2>
+      <p class="text-gray-500 mt-3">The people behind TrendDrop</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="text-center bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-pink-400 to-red-500 text-white text-3xl flex items-center justify-center mx-auto mb-4">👩</div>
+        <h4 class="font-bold text-lg text-primary">Sarah Chen</h4>
+        <p class="text-accent text-sm font-medium">CEO & Co-Founder</p>
+        <p class="text-gray-500 text-sm mt-2">Passionate about making fashion accessible worldwide.</p>
+      </div>
+      <div class="text-center bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 text-white text-3xl flex items-center justify-center mx-auto mb-4">👨</div>
+        <h4 class="font-bold text-lg text-primary">Marcus Rivera</h4>
+        <p class="text-accent text-sm font-medium">CTO & Co-Founder</p>
+        <p class="text-gray-500 text-sm mt-2">Tech enthusiast building seamless shopping experiences.</p>
+      </div>
+      <div class="text-center bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-teal-500 text-white text-3xl flex items-center justify-center mx-auto mb-4">👩</div>
+        <h4 class="font-bold text-lg text-primary">Priya Nair</h4>
+        <p class="text-accent text-sm font-medium">Head of Product Curation</p>
+        <p class="text-gray-500 text-sm mt-2">10+ years experience sourcing world-class products.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-accent text-white py-16 px-6 text-center">
+    <h2 class="text-3xl font-extrabold mb-3">Ready to Start Shopping?</h2>
+    <p class="text-red-100 mb-8">Explore our full catalog of fashion and electronics.</p>
+    <a href="shop.html" class="bg-primary hover:bg-gray-900 text-white font-bold px-10 py-4 rounded-full transition shadow-lg inline-block">Browse All Products</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center text-sm">
+    <p class="text-white font-extrabold text-xl mb-2">Trend<span class="text-accent">Drop</span></p>
+    <p>&copy; 2026 TrendDrop. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

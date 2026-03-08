@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrendDrop – Fashion & Electronics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a2e',
+            accent:  '#e94560',
+            light:   '#f5f5f5',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-extrabold tracking-tight">
+        Trend<span class="text-accent">Drop</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+        <li><a href="pages/shop.html" class="hover:text-accent transition">Shop</a></li>
+        <li><a href="pages/about.html" class="hover:text-accent transition">About</a></li>
+        <li><a href="pages/contact.html" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="pages/shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+        <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-gray-700 px-6 pb-4">
+      <ul class="flex flex-col gap-3 pt-3 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-accent transition block">Home</a></li>
+        <li><a href="pages/shop.html" class="hover:text-accent transition block">Shop</a></li>
+        <li><a href="pages/about.html" class="hover:text-accent transition block">About</a></li>
+        <li><a href="pages/contact.html" class="hover:text-accent transition block">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-primary to-gray-900 text-white py-28 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1">
+        <span class="inline-block bg-accent text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Arrivals 2026</span>
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          Style Meets<br/><span class="text-accent">Technology</span>
+        </h1>
+        <p class="text-gray-300 text-lg mb-8 max-w-lg">
+          Discover curated fashion and cutting-edge electronics delivered straight to your door. Premium products, unbeatable prices.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="pages/shop.html" class="bg-accent hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition shadow-lg">Explore Shop</a>
+          <a href="pages/about.html" class="border border-white hover:border-accent hover:text-accent text-white font-semibold px-8 py-3 rounded-full transition">Learn More</a>
+        </div>
+        <div class="flex gap-8 mt-10 text-center">
+          <div><p class="text-3xl font-extrabold text-accent">500+</p><p class="text-gray-400 text-sm mt-1">Products</p></div>
+          <div><p class="text-3xl font-extrabold text-accent">50K+</p><p class="text-gray-400 text-sm mt-1">Happy Customers</p></div>
+          <div><p class="text-3xl font-extrabold text-accent">4.9★</p><p class="text-gray-400 text-sm mt-1">Avg Rating</p></div>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="relative w-80 h-80">
+          <div class="absolute inset-0 bg-accent opacity-20 rounded-full blur-3xl"></div>
+          <div class="relative bg-gray-800 rounded-3xl w-full h-full flex items-center justify-center border border-gray-700 shadow-2xl">
+            <span class="text-8xl select-none">🛍️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-primary">Shop by Category</h2>
+        <p class="text-gray-500 mt-3">Explore our hand-picked collections</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="pages/shop.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-gradient-to-br from-pink-100 to-pink-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">👗</div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary">Women's Fashion</h3>
+            <p class="text-gray-500 text-sm mt-1">120+ styles</p>
+          </div>
+        </a>
+        <a href="pages/shop.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-gradient-to-br from-blue-100 to-blue-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">👔</div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary">Men's Fashion</h3>
+            <p class="text-gray-500 text-sm mt-1">95+ styles</p>
+          </div>
+        </a>
+        <a href="pages/shop.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-gradient-to-br from-purple-100 to-purple-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">📱</div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary">Smartphones & Gadgets</h3>
+            <p class="text-gray-500 text-sm mt-1">80+ products</p>
+          </div>
+        </a>
+        <a href="pages/shop.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-gradient-to-br from-yellow-100 to-yellow-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">🎧</div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary">Accessories</h3>
+            <p class="text-gray-500 text-sm mt-1">200+ items</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+        <div>
+          <h2 class="text-4xl font-extrabold text-primary">Featured Products</h2>
+          <p class="text-gray-500 mt-2">Top picks curated just for you</p>
+        </div>
+        <a href="pages/shop.html" class="text-accent font-semibold hover:underline">View all →</a>
+      </div>
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="bg-primary text-white py-14 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl mb-3">🚚</div>
+        <h4 class="font-bold">Free Shipping</h4>
+        <p class="text-gray-400 text-sm mt-1">On orders over $50</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-3">🔄</div>
+        <h4 class="font-bold">Easy Returns</h4>
+        <p class="text-gray-400 text-sm mt-1">30-day return policy</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-3">🔒</div>
+        <h4 class="font-bold">Secure Checkout</h4>
+        <p class="text-gray-400 text-sm mt-1">SSL encrypted payments</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-3">💬</div>
+        <h4 class="font-bold">24/7 Support</h4>
+        <p class="text-gray-400 text-sm mt-1">We're always here for you</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-primary">What Customers Say</h2>
+        <p class="text-gray-500 mt-3">Thousands of happy shoppers</p>
+      </div>
+      <div id="testimonials" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="bg-accent py-16 px-6 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Get 10% Off Your First Order</h2>
+      <p class="text-red-100 mb-8">Subscribe for exclusive deals and early access to new products.</p>
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" id="email-input" required placeholder="Enter your email"
+          class="flex-1 px-5 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"/>
+        <button type="submit" class="bg-primary hover:bg-gray-900 text-white font-bold px-7 py-3 rounded-full transition">Subscribe</button>
+      </form>
+      <p id="newsletter-msg" class="mt-4 text-sm text-red-100 hidden">🎉 Thanks for subscribing! Your discount code is on its way.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-14 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div>
+        <a href="index.html" class="text-2xl font-extrabold text-white tracking-tight">Trend<span class="text-accent">Drop</span></a>
+        <p class="mt-4 text-sm leading-relaxed">Your one-stop destination for premium fashion and cutting-edge electronics at unbeatable prices.</p>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold mb-4">Quick Links</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+          <li><a href="pages/shop.html" class="hover:text-accent transition">Shop</a></li>
+          <li><a href="pages/about.html" class="hover:text-accent transition">About Us</a></li>
+          <li><a href="pages/contact.html" class="hover:text-accent transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold mb-4">Categories</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="pages/shop.html" class="hover:text-accent transition">Women's Fashion</a></li>
+          <li><a href="pages/shop.html" class="hover:text-accent transition">Men's Fashion</a></li>
+          <li><a href="pages/shop.html" class="hover:text-accent transition">Electronics</a></li>
+          <li><a href="pages/shop.html" class="hover:text-accent transition">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold mb-4">Contact</h5>
+        <ul class="space-y-2 text-sm">
+          <li>📧 support@trenddrop.com</li>
+          <li>📞 +1 (800) 555-0199</li>
+          <li>📍 123 Commerce St, New York, NY</li>
+        </ul>
+        <div class="flex gap-4 mt-5 text-xl">
+          <a href="#" aria-label="Instagram" class="hover:text-accent transition">📸</a>
+          <a href="#" aria-label="Facebook" class="hover:text-accent transition">👍</a>
+          <a href="#" aria-label="Twitter" class="hover:text-accent transition">🐦</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-800 text-center text-sm">
+      <p>&copy; 2026 TrendDrop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
