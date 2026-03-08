@@ -7,9 +7,22 @@ const priceRange    = document.getElementById('price-range');
 const priceLabel    = document.getElementById('price-label');
 const sortSelect    = document.getElementById('sort-select');
 
-let activeCategories = new Set(['all']);
-let maxPrice = 500;
+// Pre-filter from URL param e.g. shop.html?cat=fitness
+const urlCat = new URLSearchParams(window.location.search).get('cat');
+let activeCategories = urlCat ? new Set([urlCat]) : new Set(['all']);
+let maxPrice = 300;
 let sortBy   = 'default';
+
+// Tick the matching checkbox if a URL param was given
+if (urlCat) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const cb = document.querySelector(`#cat-filters input[value="${urlCat}"]`);
+    if (cb) {
+      cb.checked = true;
+      document.querySelector('#cat-filters input[value="all"]').checked = false;
+    }
+  });
+}
 
 function getFilteredProducts() {
   let products = window.PRODUCTS || [];

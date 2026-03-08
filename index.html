@@ -96,7 +96,7 @@
         <h2 class="text-4xl font-extrabold text-primary">Shop by Category</h2>
         <p class="text-gray-500 mt-3">Explore our hand-picked collections</p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         <a href="pages/shop.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
           <div class="bg-gradient-to-br from-pink-100 to-pink-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">👗</div>
           <div class="p-5">
@@ -125,6 +125,14 @@
             <p class="text-gray-500 text-sm mt-1">200+ items</p>
           </div>
         </a>
+        <a href="pages/shop.html?cat=fitness" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+          <div class="absolute top-3 right-3 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full z-10">New</div>
+          <div class="bg-gradient-to-br from-green-100 to-emerald-50 h-44 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">🏋️</div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary">Fitness & Strength</h3>
+            <p class="text-gray-500 text-sm mt-1">11 pro products</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -141,6 +149,25 @@
       </div>
       <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
     </div>
+  </section>
+
+  <!-- FITNESS & STRENGTH TRAINING SPOTLIGHT -->
+  <section class="py-20 px-6 bg-gradient-to-br from-gray-900 to-primary text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+        <div>
+          <span class="inline-block bg-accent text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">New Category</span>
+          <h2 class="text-4xl font-extrabold">Fitness &amp; Strength Training</h2>
+          <p class="text-gray-400 mt-2">Professional-grade equipment for serious athletes</p>
+        </div>
+        <a href="pages/shop.html?cat=fitness" class="bg-accent hover:bg-red-600 text-white font-bold px-6 py-3 rounded-full transition whitespace-nowrap">Shop All Fitness →</a>
+      </div>
+      <div id="fitness-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- SPACER so next section starts correctly -->
+  <div>
   </section>
 
   <!-- FEATURES STRIP -->
