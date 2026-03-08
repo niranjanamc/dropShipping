@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product – TrendDrop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#1a1a2e', accent: '#e94560' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-extrabold tracking-tight">Trend<span class="text-accent">Drop</span></a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="../index.html" class="hover:text-accent transition">Home</a></li>
+        <li><a href="shop.html" class="hover:text-accent transition">Shop</a></li>
+        <li><a href="about.html" class="hover:text-accent transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+      <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-gray-50 border-b border-gray-100 px-6 py-3">
+    <div class="max-w-7xl mx-auto text-sm text-gray-500 flex items-center gap-2" id="breadcrumb">
+      <a href="../index.html" class="hover:text-accent transition">Home</a>
+      <span>›</span>
+      <a href="shop.html" class="hover:text-accent transition">Shop</a>
+      <span>›</span>
+      <span id="breadcrumb-name" class="text-gray-800 font-medium">Loading…</span>
+    </div>
+  </div>
+
+  <!-- LOADING STATE -->
+  <div id="loading" class="max-w-7xl mx-auto px-6 py-20 text-center text-gray-400">
+    <div class="text-5xl mb-4 animate-pulse">⏳</div>
+    <p>Loading product…</p>
+  </div>
+
+  <!-- PRODUCT CONTENT (hidden until loaded) -->
+  <div id="product-content" class="hidden">
+
+    <!-- MAIN PRODUCT SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <div class="flex flex-col lg:flex-row gap-14">
+
+        <!-- IMAGE GALLERY -->
+        <div class="lg:w-1/2">
+          <div id="main-image" class="bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl h-96 flex items-center justify-center text-9xl shadow-inner border border-gray-100 select-none"></div>
+          <div id="thumb-row" class="flex gap-3 mt-4"></div>
+          <!-- Cloudinary upload hint for admin -->
+          <p class="text-xs text-gray-400 mt-3 italic" id="image-hint"></p>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="lg:w-1/2">
+          <div class="flex items-center gap-3 mb-3">
+            <span id="product-badge" class="hidden text-xs font-bold px-3 py-1 rounded-full"></span>
+            <span id="product-category" class="text-xs text-gray-400 uppercase tracking-widest font-medium"></span>
+          </div>
+
+          <h1 id="product-name" class="text-3xl font-extrabold text-primary mb-2"></h1>
+          <p id="product-short-desc" class="text-gray-600 leading-relaxed mb-4"></p>
+
+          <!-- Rating -->
+          <div class="flex items-center gap-2 mb-5">
+            <span id="product-stars" class="stars text-xl"></span>
+            <span id="product-rating" class="font-bold text-primary"></span>
+            <span id="product-review-count" class="text-gray-400 text-sm"></span>
+          </div>
+
+          <!-- Price -->
+          <div class="flex items-baseline gap-3 mb-6">
+            <span id="product-price" class="text-4xl font-extrabold text-primary"></span>
+            <span id="product-compare-price" class="text-xl text-gray-400 line-through"></span>
+            <span id="product-savings" class="text-sm font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full"></span>
+          </div>
+
+          <!-- Features -->
+          <div id="features-section" class="mb-6">
+            <h3 class="font-bold text-gray-800 mb-3">Key Features</h3>
+            <ul id="product-features" class="space-y-2 text-sm text-gray-600"></ul>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <button id="add-to-cart-btn" class="flex-1 bg-accent hover:bg-red-600 text-white font-bold py-4 rounded-full transition shadow-md text-lg">
+              🛒 Add to Cart
+            </button>
+            <button id="wishlist-btn" class="border-2 border-gray-200 hover:border-accent text-gray-600 hover:text-accent font-bold py-4 px-6 rounded-full transition text-xl">
+              ♡
+            </button>
+          </div>
+
+          <!-- Supplier back-order link -->
+          <div id="supplier-section" class="bg-blue-50 rounded-2xl p-4 text-sm mb-4 hidden">
+            <p class="font-semibold text-blue-800 mb-1">🏭 Source this product</p>
+            <p class="text-blue-600 mb-2">MOQ: <span id="supplier-moq"></span> units · Lead time: <span id="supplier-lead"></span> days</p>
+            <a id="supplier-link" href="#" target="_blank" rel="noopener"
+               class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-full transition">
+              View on Alibaba →
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex flex-wrap gap-4 text-xs text-gray-500 mt-4">
+            <span>🚚 Free shipping over $50</span>
+            <span>🔄 30-day returns</span>
+            <span>🔒 Secure checkout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS: Description / Specs / Reviews -->
+    <section class="max-w-7xl mx-auto px-6 pb-16">
+      <div class="border-b border-gray-200 flex gap-0 mb-8">
+        <button class="tab-btn active-tab px-6 py-3 text-sm font-semibold border-b-2 border-accent text-accent" data-tab="description">Description</button>
+        <button class="tab-btn px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-primary transition" data-tab="specs">Specifications</button>
+        <button class="tab-btn px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-primary transition" data-tab="reviews">Reviews</button>
+      </div>
+
+      <!-- Description Tab -->
+      <div id="tab-description" class="tab-panel">
+        <div class="max-w-3xl">
+          <p id="long-desc" class="text-gray-600 leading-relaxed text-base"></p>
+        </div>
+      </div>
+
+      <!-- Specs Tab -->
+      <div id="tab-specs" class="tab-panel hidden">
+        <div class="max-w-2xl">
+          <table id="specs-table" class="w-full text-sm border-collapse">
+            <tbody id="specs-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Reviews Tab -->
+      <div id="tab-reviews" class="tab-panel hidden">
+        <div class="mb-6 flex items-center gap-4">
+          <div class="text-center">
+            <p id="avg-rating-big" class="text-5xl font-extrabold text-primary"></p>
+            <div id="avg-stars" class="stars text-2xl"></div>
+            <p id="total-reviews" class="text-gray-400 text-sm mt-1"></p>
+          </div>
+        </div>
+        <div id="reviews-list" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl"></div>
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="bg-gray-50 py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-extrabold text-primary mb-8">You May Also Like</h2>
+        <div id="related-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+  </div><!-- end #product-content -->
+
+  <!-- NOT FOUND -->
+  <div id="not-found" class="hidden max-w-7xl mx-auto px-6 py-20 text-center">
+    <div class="text-6xl mb-4">🔍</div>
+    <h2 class="text-2xl font-extrabold text-primary mb-2">Product Not Found</h2>
+    <p class="text-gray-500 mb-6">This product doesn't exist or has been removed.</p>
+    <a href="shop.html" class="bg-accent hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition">Browse All Products</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center text-sm">
+    <p class="text-white font-extrabold text-xl mb-2">Trend<span class="text-accent">Drop</span></p>
+    <p>&copy; 2026 TrendDrop. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/product.js"></script>
+</body>
+</html>

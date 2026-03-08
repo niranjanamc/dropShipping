@@ -63,22 +63,31 @@ function renderProductCard(product) {
     ? `<a href="${product.source}" target="_blank" rel="noopener" class="text-xs text-accent hover:underline mt-1 inline-block">View on Alibaba →</a>`
     : '';
 
+  // Detect if we're in the pages/ subdirectory or root
+  const isSubPage = window.location.pathname.includes('/pages/');
+  const productPageBase = isSubPage ? 'product.html' : 'pages/product.html';
+
   return `
     <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100">
-      <div class="relative bg-gradient-to-br from-gray-100 to-gray-50 h-48 flex items-center justify-center text-7xl select-none">
-        ${product.emoji}
-        ${badgeHTML}
-        <button class="wishlist-btn absolute top-3 right-3 text-gray-300 hover:text-red-500 transition text-xl" data-id="${product.id}" aria-label="Add to wishlist">♡</button>
-      </div>
+      <a href="${productPageBase}?id=${product.id}" class="block">
+        <div class="relative bg-gradient-to-br from-gray-100 to-gray-50 h-48 flex items-center justify-center text-7xl select-none">
+          ${product.emoji}
+          ${badgeHTML}
+        </div>
+      </a>
       <div class="p-5">
-        <p class="text-xs text-gray-400 uppercase tracking-wide mb-1">${categoryLabel}</p>
-        <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">${product.name}</h3>
+        <div class="flex items-start justify-between mb-1">
+          <p class="text-xs text-gray-400 uppercase tracking-wide">${categoryLabel}</p>
+          <button class="wishlist-btn text-gray-300 hover:text-red-500 transition text-lg leading-none" data-id="${product.id}" aria-label="Add to wishlist">♡</button>
+        </div>
+        <a href="${productPageBase}?id=${product.id}" class="block hover:text-accent transition">
+          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">${product.name}</h3>
+        </a>
         ${product.desc ? `<p class="text-xs text-gray-500 leading-relaxed mb-2 line-clamp-2">${product.desc}</p>` : ''}
         <div class="flex items-center gap-1 mb-3">
           <span class="stars text-sm">${'★'.repeat(Math.floor(product.rating))}</span>
           <span class="text-xs text-gray-400">${product.rating} (${product.reviews})</span>
         </div>
-        ${sourceLink}
         <div class="flex items-center justify-between mt-2">
           <span class="text-lg font-extrabold text-primary">$${product.price}</span>
           <button class="add-to-cart bg-accent hover:bg-red-600 text-white text-xs font-bold px-4 py-2 rounded-full transition" data-id="${product.id}">

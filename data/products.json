@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "slug": "urban-slim-fit-jacket",
+    "name": "Urban Slim Fit Jacket",
+    "category": "men",
+    "subcategory": "Outerwear",
+    "badge": "Bestseller",
+    "price": 89,
+    "comparePrice": 129,
+    "emoji": "🧥",
+    "images": [],
+    "shortDesc": "Premium slim-fit jacket with water-resistant coating. Perfect for city commutes and casual outings.",
+    "longDesc": "Crafted from a high-density polyester-cotton blend, this jacket delivers all-day comfort without sacrificing style. The DWR (Durable Water Repellent) finish sheds light rain effortlessly. Slim-fit silhouette with articulated elbows for unrestricted movement. Inside pocket, two zip side pockets.",
+    "features": [
+      "Water-resistant DWR outer shell",
+      "Slim-fit tailored silhouette",
+      "Articulated elbow design",
+      "3 zip pockets including inner chest pocket",
+      "Available in S–3XL"
+    ],
+    "specs": {
+      "Material": "80% Polyester, 20% Cotton",
+      "Fit": "Slim / Regular",
+      "Care": "Machine wash cold, tumble dry low",
+      "Sizes": "S, M, L, XL, 2XL, 3XL",
+      "Colours": "Black, Navy, Olive, Charcoal"
+    },
+    "rating": 4.7,
+    "reviewCount": 124,
+    "reviews": [
+      { "author": "Marcus T.", "location": "New York, NY", "rating": 5, "date": "2026-01-12", "text": "Fits perfectly and the water resistance works great. Gets compliments every time I wear it." },
+      { "author": "Daniel P.", "location": "Seattle, WA",  "rating": 4, "date": "2026-02-03", "text": "Good quality jacket, very clean look. Sizing runs slightly slim — order a size up if in between." },
+      { "author": "Ryan K.",   "location": "Chicago, IL",  "rating": 5, "date": "2026-02-18", "text": "Excellent build quality. Wore it in light rain and stayed completely dry. Great value." }
+    ],
+    "supplier": {
+      "name": "Alibaba",
+      "url": "",
+      "moq": 20,
+      "leadTimeDays": "15–25",
+      "costPriceUSD": 22
+    },
+    "inStock": true,
+    "tags": ["jacket", "slim fit", "water resistant", "men", "outerwear"]
+  },
+  {
+    "id": 2,
+    "slug": "wireless-noise-cancel-headphones",
+    "name": "Wireless Noise-Cancelling Headphones",
+    "category": "electronics",
+    "subcategory": "Audio",
+    "badge": "Hot",
+    "price": 149,
+    "comparePrice": 199,
+    "emoji": "🎧",
+    "images": [],
+    "shortDesc": "Over-ear headphones with 40-hour battery life, active noise cancellation and hi-fi sound.",
+    "longDesc": "Experience premium audio with dual-layer active noise cancellation that blocks up to 35dB of ambient noise. The 40mm custom drivers deliver rich bass, clear mids, and crisp highs. Foldable design with a carry case, 40-hour battery with quick charge (15 min = 3 hours playback), and multipoint Bluetooth 5.3 pairing.",
+    "features": [
+      "Active noise cancellation up to 35dB",
+      "40-hour battery life with quick charge",
+      "Bluetooth 5.3 with multipoint pairing (2 devices)",
+      "Built-in voice assistant support",
+      "Foldable design with carrying case included"
+    ],
+    "specs": {
+      "Driver Size": "40mm custom dynamic",
+      "Frequency Response": "20Hz – 20kHz",
+      "Battery": "40 hrs (ANC on) / 60 hrs (ANC off)",
+      "Charging": "USB-C, 15 min = 3 hrs playback",
+      "Bluetooth": "5.3, range up to 10m",
+      "Weight": "250g"
+    },
+    "rating": 4.9,
+    "reviewCount": 312,
+    "reviews": [
+      { "author": "James K.",   "location": "Los Angeles, CA", "rating": 5, "date": "2026-01-08", "text": "Sound quality is on par with brands costing twice as much. The noise cancellation is genuinely impressive." },
+      { "author": "Priya S.",   "location": "Austin, TX",      "rating": 5, "date": "2026-01-25", "text": "I use these for 8+ hour work days. Comfortable even after long periods. Battery lasts all week." },
+      { "author": "Ahmed N.",   "location": "Miami, FL",       "rating": 5, "date": "2026-02-14", "text": "Bought these sceptically at this price point — genuinely shocked by the quality. Don't hesitate." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 10, "leadTimeDays": "12–18", "costPriceUSD": 38 },
+    "inStock": true,
+    "tags": ["headphones", "noise cancelling", "bluetooth", "audio", "wireless"]
+  },
+  {
+    "id": 3,
+    "slug": "floral-maxi-dress",
+    "name": "Floral Maxi Dress",
+    "category": "women",
+    "subcategory": "Dresses",
+    "badge": "New",
+    "price": 62,
+    "comparePrice": 89,
+    "emoji": "👗",
+    "images": [],
+    "shortDesc": "Lightweight floral-print maxi dress in breathable chiffon fabric. Available in 6 colours.",
+    "longDesc": "This flowing maxi dress is crafted from lightweight georgette chiffon that drapes beautifully and moves effortlessly. The allover floral print is digitally rendered for vivid, fade-resistant colour. V-neckline, adjustable spaghetti straps, and a tiered skirt for a flattering silhouette on all body types.",
+    "features": [
+      "Breathable georgette chiffon fabric",
+      "Digital floral print — vivid and fade-resistant",
+      "Adjustable spaghetti straps",
+      "Tiered maxi skirt — floor-length",
+      "Available in 6 colour palettes"
+    ],
+    "specs": {
+      "Material": "100% Polyester Georgette",
+      "Length": "Maxi (floor-length)",
+      "Neckline": "V-neck",
+      "Closure": "Hidden back zip",
+      "Sizes": "XS, S, M, L, XL, 2XL",
+      "Care": "Hand wash cold or delicate cycle"
+    },
+    "rating": 4.6,
+    "reviewCount": 98,
+    "reviews": [
+      { "author": "Sofia M.",  "location": "New York, NY", "rating": 5, "date": "2026-02-01", "text": "The fabric is so light and the print is gorgeous. Perfect for summer events." },
+      { "author": "Hannah L.", "location": "Dallas, TX",   "rating": 4, "date": "2026-02-20", "text": "Beautiful dress, runs true to size. The straps are easy to adjust." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 30, "leadTimeDays": "20–30", "costPriceUSD": 14 },
+    "inStock": true,
+    "tags": ["dress", "maxi", "floral", "women", "summer", "chiffon"]
+  },
+  {
+    "id": 13,
+    "slug": "power-wrist-strength-exerciser",
+    "name": "Power Wrist Strength Exerciser",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "New",
+    "price": 22,
+    "comparePrice": 35,
+    "emoji": "💪",
+    "images": [],
+    "shortDesc": "Compact wrist and forearm exerciser for grip and rotational strength. Adjustable resistance for all levels.",
+    "longDesc": "The Power Wrist Exerciser uses a spring-loaded resistance mechanism targeting the wrist flexors, extensors, and forearm rotators simultaneously. Far more effective than traditional squeeze balls, it provides progressive overload for real strength gains. Compact and silent — use it at a desk, in the gym, or while watching TV.",
+    "features": [
+      "Adjustable spring resistance — beginner to advanced",
+      "Targets wrist flexors, extensors and forearm rotators",
+      "Silent operation — suitable for office use",
+      "Compact: fits in a pocket or gym bag",
+      "Anti-slip textured grip surface"
+    ],
+    "specs": {
+      "Resistance Range": "5–60 lbs adjustable",
+      "Material": "Aircraft-grade aluminium + TPR grip",
+      "Weight": "180g",
+      "Dimensions": "12 × 8 cm",
+      "Suitable For": "All levels, rehabilitation, sports training"
+    },
+    "rating": 4.6,
+    "reviewCount": 312,
+    "reviews": [
+      { "author": "Chris W.", "location": "Denver, CO",     "rating": 5, "date": "2026-01-15", "text": "Use this daily for grip training. My deadlift went up 20 lbs in 6 weeks. Sturdy build." },
+      { "author": "Tom B.",   "location": "Phoenix, AZ",    "rating": 5, "date": "2026-02-02", "text": "Great for rehab after my wrist injury. The adjustable resistance lets you start light and progress slowly." },
+      { "author": "Sam R.",   "location": "Portland, OR",   "rating": 4, "date": "2026-02-28", "text": "Solid tool. Compact enough to use at my work desk. Noticeable forearm pump after 10 minutes." }
+    ],
+    "supplier": {
+      "name": "Alibaba",
+      "url": "https://www.alibaba.com/product-detail/Power-Wrists-Exerciser-for-Strength-Training_1601417584485.html",
+      "moq": 50,
+      "leadTimeDays": "10–18",
+      "costPriceUSD": 6
+    },
+    "inStock": true,
+    "tags": ["wrist", "forearm", "grip strength", "exerciser", "fitness", "strength training"]
+  },
+  {
+    "id": 14,
+    "slug": "multi-function-pull-down-station",
+    "name": "Multi-Function Pull Down Station",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "Hot",
+    "price": 249,
+    "comparePrice": 399,
+    "emoji": "🏋️",
+    "images": [],
+    "shortDesc": "Commercial-grade lat pull-down and cable row machine with 11 adjustable positions and 200 lb weight stack.",
+    "longDesc": "A commercial-quality cable station for home or small gyms. The dual cable pulley system allows lat pull-downs, seated cable rows, tricep push-downs, bicep curls and more — all from one compact footprint. 11 adjustable seat/pad positions, powder-coated steel frame rated to 500 lbs, and a 200 lb weight stack included.",
+    "features": [
+      "Dual-function: lat pull-down + low cable row",
+      "200 lb weight stack included",
+      "11 adjustable seat and knee pad positions",
+      "Powder-coated heavy-gauge steel frame (500 lb rated)",
+      "Multiple cable attachments included (bar, single handle, rope)"
+    ],
+    "specs": {
+      "Weight Stack": "200 lbs (91 kg)",
+      "Frame": "12-gauge steel, powder-coated",
+      "Max User Weight": "500 lbs (227 kg)",
+      "Footprint": "58\" L × 44\" W × 83\" H",
+      "Cable Ratio": "2:1 (reduces effective weight by half)",
+      "Assembly": "Required, tools included"
+    },
+    "rating": 4.8,
+    "reviewCount": 178,
+    "reviews": [
+      { "author": "Derek M.", "location": "Houston, TX",    "rating": 5, "date": "2026-01-20", "text": "Rock solid machine. Assembly took 2 hours but the build quality is genuinely commercial grade." },
+      { "author": "Lisa F.",  "location": "Atlanta, GA",    "rating": 5, "date": "2026-02-10", "text": "Best home gym purchase I've made. Smooth cable action, no wobble at all during heavy sets." },
+      { "author": "Paul G.",  "location": "San Diego, CA",  "rating": 4, "date": "2026-02-25", "text": "Great machine. The weight stack could go heavier but for most people 200 lbs is plenty." }
+    ],
+    "supplier": {
+      "name": "Alibaba",
+      "url": "https://www.alibaba.com/product-detail/Strength-Training-Gym-Pull-Down-Multi_1601628143749.html",
+      "moq": 2,
+      "leadTimeDays": "20–35",
+      "costPriceUSD": 95
+    },
+    "inStock": true,
+    "tags": ["lat pulldown", "cable machine", "home gym", "strength training", "fitness equipment"]
+  },
+  {
+    "id": 15,
+    "slug": "vbt-linear-encoder-sensor",
+    "name": "VBT Linear Encoder Sensor",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "New",
+    "price": 115,
+    "comparePrice": 175,
+    "emoji": "📡",
+    "images": [],
+    "shortDesc": "Velocity-Based Training sensor that tracks bar speed in real-time to identify your optimal training zone.",
+    "longDesc": "Velocity-Based Training (VBT) is the most advanced method for optimising strength and power programming. This high-precision linear encoder clips to any barbell and connects via Bluetooth to your phone. The companion app displays mean concentric velocity, peak velocity, power output and rep quality in real-time. Train smarter — not just harder.",
+    "features": [
+      "Real-time bar velocity measurement (±0.01 m/s accuracy)",
+      "Identifies training zone: power / strength / hypertrophy",
+      "Bluetooth 5.0 — connects to iOS and Android app",
+      "Clips to any standard Olympic barbell in seconds",
+      "Tracks power output, rep quality and fatigue in session"
+    ],
+    "specs": {
+      "Measurement Range": "0.01 – 5.00 m/s",
+      "Accuracy": "±0.01 m/s",
+      "Connectivity": "Bluetooth 5.0",
+      "Battery": "Rechargeable, 20hr per charge",
+      "Compatibility": "All standard 28–32mm barbells",
+      "App": "iOS 13+ / Android 9+"
+    },
+    "rating": 4.7,
+    "reviewCount": 94,
+    "reviews": [
+      { "author": "Alex R.", "location": "Boston, MA",    "rating": 5, "date": "2026-01-30", "text": "Changed my entire approach to programming. Knowing my velocity tells me exactly how recovered I am each session." },
+      { "author": "Mike S.", "location": "Minneapolis, MN", "rating": 4, "date": "2026-02-22", "text": "Accurate readings, solid app. The data it gives you is genuinely actionable for programming." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 5, "leadTimeDays": "15–22", "costPriceUSD": 42 },
+    "inStock": true,
+    "tags": ["VBT", "velocity training", "barbell", "sensor", "strength training", "power"]
+  },
+  {
+    "id": 16,
+    "slug": "pneumatic-bfr-training-cuffs",
+    "name": "Pneumatic BFR Training Cuffs",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": null,
+    "price": 58,
+    "comparePrice": 95,
+    "emoji": "🩹",
+    "images": [],
+    "shortDesc": "Integrated-pump blood flow restriction cuffs for occlusion training with precise pressure control.",
+    "longDesc": "Blood Flow Restriction (BFR) training is clinically proven to stimulate muscle hypertrophy using loads as low as 20–30% of 1RM. These pneumatic cuffs feature an integrated hand pump with pressure gauge so you can dial in the exact occlusion pressure. Ideal for injury rehabilitation, older athletes, or anyone wanting muscle growth without heavy loading.",
+    "features": [
+      "Integrated pressure gauge — precise occlusion control",
+      "Pneumatic (air pump) — no batteries needed",
+      "Wide 7cm cuffs distribute pressure evenly",
+      "Works on both arms and legs",
+      "Clinically validated BFR pressure ranges included in manual"
+    ],
+    "specs": {
+      "Cuff Width": "7 cm",
+      "Pressure Range": "0 – 300 mmHg",
+      "Material": "Medical-grade nylon with neoprene padding",
+      "Set Includes": "2 arm cuffs + 2 leg cuffs + pump + carry bag",
+      "Max Limb Circumference": "Arms 42cm / Legs 65cm"
+    },
+    "rating": 4.5,
+    "reviewCount": 137,
+    "reviews": [
+      { "author": "Dr. Carol H.", "location": "San Francisco, CA", "rating": 5, "date": "2026-01-18", "text": "Recommend these to my physio patients for post-op rehab. The pressure gauge makes safe BFR accessible." },
+      { "author": "Ben K.",       "location": "Nashville, TN",     "rating": 4, "date": "2026-02-15", "text": "Effective for getting a pump with light weights. Good quality for the price." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 10, "leadTimeDays": "14–20", "costPriceUSD": 18 },
+    "inStock": true,
+    "tags": ["BFR", "blood flow restriction", "occlusion training", "rehab", "fitness"]
+  },
+  {
+    "id": 17,
+    "slug": "silicone-finger-extensor-trainer",
+    "name": "Silicone Finger Extensor Trainer",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "Bestseller",
+    "price": 14,
+    "comparePrice": 22,
+    "emoji": "🖐️",
+    "images": [],
+    "shortDesc": "Honeycomb silicone resistance rings targeting the extensor muscles — prevents tennis elbow and grip imbalance.",
+    "longDesc": "Most grip training focuses exclusively on closing the hand (flexors), which creates a muscular imbalance that leads to tennis elbow, golfer's elbow and wrist pain. These honeycomb silicone rings train the hand-opening movement (extensors), restoring balance and protecting the joints. Available in 3 resistance levels — use them during warm-up or as active recovery.",
+    "features": [
+      "Trains finger extensors — the most neglected hand muscles",
+      "Prevents tennis elbow and grip-related overuse injuries",
+      "3 resistance levels: Light (3 lbs) / Medium (5 lbs) / Heavy (7 lbs)",
+      "Honeycomb texture for non-slip grip",
+      "Set of 5 rings per pack (one per finger)"
+    ],
+    "specs": {
+      "Material": "Food-grade silicone",
+      "Resistance": "Light 3 lbs / Medium 5 lbs / Heavy 7 lbs",
+      "Pack Contents": "5 rings per set",
+      "Diameter": "40mm (unstretched)",
+      "Suitable For": "Climbers, lifters, musicians, desk workers"
+    },
+    "rating": 4.4,
+    "reviewCount": 523,
+    "reviews": [
+      { "author": "Jenny L.", "location": "Boulder, CO",  "rating": 5, "date": "2026-01-05", "text": "Cured my tennis elbow after 3 weeks of daily use. Every serious climber needs these." },
+      { "author": "Dave T.",  "location": "Portland, OR", "rating": 4, "date": "2026-01-28", "text": "Cheap, effective, and they work. The medium resistance is plenty for daily use." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 100, "leadTimeDays": "10–15", "costPriceUSD": 2.50 },
+    "inStock": true,
+    "tags": ["finger trainer", "extensor", "grip", "tennis elbow", "rock climbing", "rehab"]
+  },
+  {
+    "id": 18,
+    "slug": "360-rotating-cable-handles",
+    "name": "360° Rotating Cable Handles",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "Hot",
+    "price": 42,
+    "comparePrice": 65,
+    "emoji": "🔄",
+    "images": [],
+    "shortDesc": "Professional rotating turret D-handles with full 360° swivel — eliminates wrist and elbow joint strain.",
+    "longDesc": "Standard fixed cable handles force your wrist into unnatural angles during exercises like cable flyes, curls and push-downs, causing the familiar joint 'clicking' and long-term strain. These handles feature a precision ball-bearing swivel at the attachment point, allowing the handle to rotate freely throughout the entire range of motion. Machined from aircraft-grade aluminium with a knurled steel grip.",
+    "features": [
+      "Full 360° rotation via precision ball-bearing swivel",
+      "Eliminates wrist pronation and joint clicking",
+      "Compatible with all standard cable machines (carabiner clip)",
+      "Knurled steel grip for secure hold under heavy loads",
+      "Sold as a pair with carry bag"
+    ],
+    "specs": {
+      "Material": "6061 aircraft-grade aluminium + steel hardware",
+      "Swivel": "Sealed precision ball bearing",
+      "Weight Capacity": "200 lbs per handle",
+      "Handle Length": "13 cm",
+      "Attachment": "Universal carabiner clip",
+      "Weight": "280g per handle"
+    },
+    "rating": 4.8,
+    "reviewCount": 289,
+    "reviews": [
+      { "author": "Nathan G.", "location": "Austin, TX",  "rating": 5, "date": "2026-02-05", "text": "No more wrist clicking on cable flyes. Smooth rotation throughout the entire movement. Premium feel." },
+      { "author": "Carla M.",  "location": "Chicago, IL", "rating": 5, "date": "2026-02-19", "text": "Bought these after a wrist injury. The difference is immediate — completely pain-free cable work now." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 20, "leadTimeDays": "12–20", "costPriceUSD": 12 },
+    "inStock": true,
+    "tags": ["cable handles", "rotating", "gym attachment", "wrist health", "cable machine"]
+  },
+  {
+    "id": 19,
+    "slug": "digital-hand-dynamometer-180kg",
+    "name": "Digital Hand Dynamometer 180kg",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": null,
+    "price": 72,
+    "comparePrice": 110,
+    "emoji": "✊",
+    "images": [],
+    "shortDesc": "High-precision 180kg grip strength meter for tracking CNS recovery and training readiness.",
+    "longDesc": "Grip strength is one of the most reliable biomarkers of CNS (Central Nervous System) fatigue. If your grip is down 10% or more from your baseline, it's a strong signal your body hasn't fully recovered. This medical-grade dynamometer measures up to 180kg / 396 lbs with ±0.1kg precision. Stores last 10 measurements with peak/average display. Used by elite sports teams, physiotherapists and serious athletes worldwide.",
+    "features": [
+      "180kg / 396 lb capacity — covers elite athlete range",
+      "±0.1 kg accuracy with medical-grade load cell",
+      "Stores 10 readings with peak and average display",
+      "Adjustable handle width for all hand sizes",
+      "Tracks CNS recovery — objective daily readiness score"
+    ],
+    "specs": {
+      "Capacity": "180 kg / 396 lbs",
+      "Accuracy": "±0.1 kg",
+      "Display": "LCD, dual kg/lb readout",
+      "Memory": "Stores last 10 measurements",
+      "Power": "2× AAA batteries (included)",
+      "Handle Adjustment": "5 positions, 35–85mm span"
+    },
+    "rating": 4.7,
+    "reviewCount": 156,
+    "reviews": [
+      { "author": "Coach Tim R.", "location": "Columbus, OH", "rating": 5, "date": "2026-01-22", "text": "I test all my athletes daily with this. Correlates perfectly with session readiness. Worth every penny." },
+      { "author": "Sarah V.",     "location": "Denver, CO",   "rating": 5, "date": "2026-02-08", "text": "Started tracking my grip every morning. Completely changed how I manage recovery and training load." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 5, "leadTimeDays": "14–22", "costPriceUSD": 28 },
+    "inStock": true,
+    "tags": ["dynamometer", "grip strength", "CNS recovery", "training readiness", "sports science"]
+  },
+  {
+    "id": 20,
+    "slug": "hook-grip-weightlifting-tape",
+    "name": "Hook Grip Weightlifting Tape",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "Bestseller",
+    "price": 12,
+    "comparePrice": 18,
+    "emoji": "🤚",
+    "images": [],
+    "shortDesc": "Flexible EAB thumb tape purpose-built for Olympic lifting hook grip — far superior to standard athletic tape.",
+    "longDesc": "Standard athletic tape is rigid and cuts off circulation over a long session. This EAB (Elastic Adhesive Bandage) tape is specifically designed for the hook grip used in the snatch and clean & jerk. It stretches with your thumb during the pull but locks in for the catch. Perforated every 25cm for easy tearing. Latex-free, skin-friendly adhesive.",
+    "features": [
+      "EAB (Elastic Adhesive Bandage) — stretches with movement",
+      "Purpose-built for hook grip in Olympic lifting",
+      "Perforated every 25cm — no scissors needed",
+      "Latex-free, skin-safe adhesive",
+      "4 rolls per pack — lasts 3–4 months of daily training"
+    ],
+    "specs": {
+      "Material": "Cotton + elastic blend, acrylic adhesive",
+      "Width": "2.5 cm (standard thumb width)",
+      "Length": "10m per roll",
+      "Pack": "4 rolls",
+      "Latex": "Latex-free",
+      "Colour": "White, Black, Blue (choose at checkout)"
+    },
+    "rating": 4.6,
+    "reviewCount": 841,
+    "reviews": [
+      { "author": "Olympic Lifter", "location": "Dallas, TX",  "rating": 5, "date": "2026-01-10", "text": "Finally a tape that doesn't restrict circulation. Stays on through a full snatch session. Reorder every month." },
+      { "author": "Jen P.",         "location": "Denver, CO",  "rating": 5, "date": "2026-02-01", "text": "Made the hook grip comfortable for the first time in years. The elastic stretch is the key difference." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 100, "leadTimeDays": "8–14", "costPriceUSD": 2.20 },
+    "inStock": true,
+    "tags": ["hook grip", "weightlifting tape", "EAB", "Olympic lifting", "thumb tape"]
+  },
+  {
+    "id": 21,
+    "slug": "electric-vacuum-callus-shaver",
+    "name": "Electric Vacuum Callus Shaver",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": null,
+    "price": 45,
+    "comparePrice": 69,
+    "emoji": "⚡",
+    "images": [],
+    "shortDesc": "High-torque electric callus remover with built-in vacuum — essential palm maintenance for heavy lifters.",
+    "longDesc": "Heavy lifting builds calluses that, if unmanaged, can tear during a set — pulling skin from the palm mid-lift. This tool uses a high-speed rotating micro-file combined with a vacuum channel that draws skin dust directly into a removable collection chamber. No mess, no skin particles in the air. The 4-speed motor handles even the thickest lifter calluses efficiently.",
+    "features": [
+      "Built-in vacuum captures all skin dust — no mess",
+      "4-speed motor from gentle maintenance to heavy removal",
+      "2 roller heads: fine (maintenance) and coarse (removal)",
+      "LED light for precision visibility",
+      "USB-C rechargeable — no disposable batteries"
+    ],
+    "specs": {
+      "Motor": "High-torque DC, 4-speed",
+      "Roller Heads": "2 included (fine + coarse)",
+      "Charging": "USB-C, 2hr full charge",
+      "Battery Life": "60 minutes per charge",
+      "Vacuum Chamber": "Removable, easy to empty",
+      "Weight": "180g"
+    },
+    "rating": 4.5,
+    "reviewCount": 203,
+    "reviews": [
+      { "author": "Powerlifter Pete", "location": "Nashville, TN", "rating": 5, "date": "2026-01-28", "text": "Managed calluses for years with a pumice stone — this is on another level. The vacuum feature is genius." },
+      { "author": "Kim Y.",            "location": "Seattle, WA",   "rating": 4, "date": "2026-02-16", "text": "Effective and clean to use. The coarse head is powerful — start on the fine head first." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 10, "leadTimeDays": "12–18", "costPriceUSD": 16 },
+    "inStock": true,
+    "tags": ["callus remover", "palm care", "lifter", "electric", "grooming", "hand care"]
+  },
+  {
+    "id": 22,
+    "slug": "aluminum-alloy-arm-blaster",
+    "name": "Aluminum Alloy Arm Blaster",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "New",
+    "price": 35,
+    "comparePrice": 55,
+    "emoji": "🦾",
+    "images": [],
+    "shortDesc": "CNC-machined aluminium arm blaster — locks elbows in place for strict, momentum-free bicep isolation.",
+    "longDesc": "The arm blaster is one of the oldest and most effective tools for bicep development, popularised by Arnold Schwarzenegger. By locking the elbows against a rigid platform, all momentum from the lower back and shoulders is removed, placing the entire load directly on the bicep. This version is machined from 3mm aircraft-grade aluminium — far more rigid and durable than the cheap stamped-steel versions sold elsewhere.",
+    "features": [
+      "CNC-machined 3mm aircraft-grade aluminium — rigid and durable",
+      "Contoured elbow shelf for comfortable locking position",
+      "Adjustable neck strap — fits all torso lengths",
+      "Removes all momentum for strict bicep isolation",
+      "Compatible with barbell, EZ bar and dumbbells"
+    ],
+    "specs": {
+      "Material": "3mm 6061 aircraft-grade aluminium",
+      "Finish": "Anodised (scratch resistant)",
+      "Width": "56 cm (fits all shoulder widths)",
+      "Neck Strap": "Adjustable 70–120 cm",
+      "Weight": "520g",
+      "Load Rating": "No limit — load on biceps, not the blaster"
+    },
+    "rating": 4.7,
+    "reviewCount": 418,
+    "reviews": [
+      { "author": "Victor M.", "location": "Las Vegas, NV", "rating": 5, "date": "2026-01-16", "text": "Finally arms I can be proud of. This thing forces you to actually use your biceps. Best $35 I've spent." },
+      { "author": "Tyler B.",  "location": "Tampa, FL",     "rating": 5, "date": "2026-02-04", "text": "The aluminium quality is legit. Had cheap ones before that bent under heavy barbell curls — not this one." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 20, "leadTimeDays": "12–20", "costPriceUSD": 10 },
+    "inStock": true,
+    "tags": ["arm blaster", "bicep", "curl", "isolation", "bodybuilding", "aluminium"]
+  },
+  {
+    "id": 23,
+    "slug": "antibacterial-liquid-gym-chalk",
+    "name": "Antibacterial Liquid Gym Chalk",
+    "category": "fitness",
+    "subcategory": "Strength Training",
+    "badge": "Hot",
+    "price": 18,
+    "comparePrice": 28,
+    "emoji": "🤲",
+    "images": [],
+    "shortDesc": "70%+ alcohol quick-dry liquid chalk with superior grip — sanitises hands while eliminating chalk cloud mess.",
+    "longDesc": "Traditional chalk blocks leave a cloud of magnesium carbonate dust that coats equipment, triggers asthma and gets you kicked out of commercial gyms. This liquid chalk formula combines pharmaceutical-grade magnesium carbonate with 70%+ isopropyl alcohol. The alcohol sanitises hands on contact and then evaporates in 10–15 seconds, leaving a clean, dry chalk coating that outlasts block chalk by 3–4 sets.",
+    "features": [
+      "70%+ isopropyl alcohol — sanitises on application",
+      "Pharmaceutical-grade magnesium carbonate",
+      "Quick-dry: ready in 10–15 seconds",
+      "Lasts 3–4 sets per application vs. 1 set for block chalk",
+      "No dust cloud — gym-friendly, allowed everywhere"
+    ],
+    "specs": {
+      "Active Ingredients": "Magnesium carbonate + 70% isopropyl alcohol",
+      "Volume": "250ml bottle",
+      "Dry Time": "10–15 seconds",
+      "Scent": "Unscented",
+      "Grip Duration": "3–4 sets per application",
+      "Suitable For": "Lifting, climbing, gymnastics, pole fitness"
+    },
+    "rating": 4.8,
+    "reviewCount": 672,
+    "reviews": [
+      { "author": "CrossFit Jane", "location": "Miami, FL",       "rating": 5, "date": "2026-01-08", "text": "Finally allowed to use chalk at my box. Grip is better than block chalk and no dust cloud anywhere." },
+      { "author": "Rock Guy",      "location": "Salt Lake City, UT", "rating": 5, "date": "2026-01-30", "text": "Use this for bouldering. Outlasts every other liquid chalk I've tried, and my hands stay cleaner." }
+    ],
+    "supplier": { "name": "Alibaba", "url": "", "moq": 50, "leadTimeDays": "10–15", "costPriceUSD": 4.50 },
+    "inStock": true,
+    "tags": ["liquid chalk", "grip", "lifting", "climbing", "antibacterial", "gym chalk"]
+  }
+]
