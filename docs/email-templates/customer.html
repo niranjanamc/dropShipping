@@ -1,0 +1,78 @@
+<!-- ─────────────────────────────────────────────────────────────────────────
+     TrendDrop — Customer Order Confirmation Email
+     Paste this as the "Body (HTML)" in your EmailJS Customer Template.
+     Variables (filled automatically by checkout.js):
+       {{to_name}}       Full name of customer
+       {{order_id}}      e.g. TD-LK3MN2-ABCD
+       {{order_items}}   Line-by-line item list
+       {{order_total}}   e.g. $87.00
+       {{ship_to}}       Full shipping address
+       {{delivery}}      e.g. 10–25 business days
+       {{store_name}}    TrendDrop
+       {{store_url}}     https://niranjanamc.github.io/dropShipping/
+       {{reply_to}}      support@trenddrop.com
+──────────────────────────────────────────────────────────────────────────── -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    body { font-family: Inter, Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+    .wrapper { max-width: 600px; margin: 30px auto; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .header { background: #1a1a2e; color: #fff; padding: 32px 40px; text-align: center; }
+    .header h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+    .header span { color: #e94560; }
+    .body { padding: 36px 40px; color: #374151; font-size: 15px; line-height: 1.7; }
+    .order-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+    .order-box h3 { margin: 0 0 12px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: #9ca3af; }
+    .order-id { color: #e94560; font-weight: 800; font-size: 18px; }
+    .items { white-space: pre-line; font-family: monospace; font-size: 13px; color: #374151; }
+    .total-row { display: flex; justify-content: space-between; font-weight: 800; font-size: 16px; color: #1a1a2e; border-top: 1px solid #e5e7eb; margin-top: 12px; padding-top: 12px; }
+    .cta { text-align: center; margin: 32px 0; }
+    .btn { background: #e94560; color: #fff; text-decoration: none; font-weight: 700; padding: 14px 32px; border-radius: 50px; display: inline-block; font-size: 15px; }
+    .footer { background: #f9fafb; border-top: 1px solid #e5e7eb; padding: 24px 40px; text-align: center; color: #9ca3af; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Trend<span>Drop</span></h1>
+      <p style="margin:8px 0 0;color:#d1d5db;font-size:14px;">Your order is confirmed 🎉</p>
+    </div>
+    <div class="body">
+      <p>Hi <strong>{{to_name}}</strong>,</p>
+      <p>Thank you for your order! We've received it and our team is now processing it. You'll receive a secure payment link within <strong>24 hours</strong>.</p>
+
+      <div class="order-box">
+        <h3>Order Reference</h3>
+        <p class="order-id">{{order_id}}</p>
+      </div>
+
+      <div class="order-box">
+        <h3>Items Ordered</h3>
+        <div class="items">{{order_items}}</div>
+        <div class="total-row">
+          <span>Total</span>
+          <span>{{order_total}}</span>
+        </div>
+      </div>
+
+      <div class="order-box">
+        <h3>Shipping To</h3>
+        <p style="margin:0;font-size:14px;">{{to_name}}<br/>{{ship_to}}</p>
+        <p style="margin:10px 0 0;font-size:13px;color:#6b7280;">Estimated delivery: <strong>{{delivery}}</strong></p>
+      </div>
+
+      <div class="cta">
+        <a href="{{store_url}}" class="btn">Continue Shopping</a>
+      </div>
+
+      <p style="color:#6b7280;font-size:13px;">Questions? Reply to this email or contact us at <a href="mailto:{{reply_to}}" style="color:#e94560;">{{reply_to}}</a></p>
+    </div>
+    <div class="footer">
+      <p>&copy; 2026 {{store_name}}. All rights reserved.</p>
+      <p style="margin:4px 0 0;">Items ship directly to your door from our global supplier network.</p>
+    </div>
+  </div>
+</body>
+</html>

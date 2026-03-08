@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout – TrendDrop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#1a1a2e', accent: '#e94560' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-extrabold tracking-tight">Trend<span class="text-accent">Drop</span></a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="../index.html" class="hover:text-accent transition">Home</a></li>
+        <li><a href="shop.html" class="hover:text-accent transition">Shop</a></li>
+        <li><a href="about.html" class="hover:text-accent transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="checkout.html" class="relative hover:text-accent transition" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-9H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m5-4H9"/>
+          </svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+        </a>
+        <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="bg-primary text-white py-10 px-6 text-center">
+    <h1 class="text-3xl font-extrabold">Checkout</h1>
+    <p class="text-gray-300 mt-2 text-sm">Review your order and enter your shipping details</p>
+  </div>
+
+  <!-- EMPTY CART STATE -->
+  <div id="empty-cart" class="hidden max-w-lg mx-auto px-6 py-24 text-center">
+    <div class="text-6xl mb-4">🛒</div>
+    <h2 class="text-2xl font-extrabold text-primary mb-2">Your cart is empty</h2>
+    <p class="text-gray-500 mb-8">Looks like you haven't added anything yet.</p>
+    <a href="shop.html" class="bg-accent hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition">Browse Products</a>
+  </div>
+
+  <!-- CHECKOUT LAYOUT -->
+  <div id="checkout-layout" class="hidden max-w-7xl mx-auto px-6 py-12">
+    <div class="flex flex-col lg:flex-row gap-10 items-start">
+
+      <!-- ── LEFT: Order Form ── -->
+      <div class="flex-1">
+
+        <!-- Step 1: Cart items -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 class="text-lg font-extrabold text-primary mb-5 flex items-center gap-2">
+            <span class="bg-accent text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+            Your Items
+          </h2>
+          <div id="cart-items-list" class="space-y-3"></div>
+          <div class="border-t border-gray-100 mt-4 pt-4 flex justify-between text-sm">
+            <a href="shop.html" class="text-accent hover:underline font-medium">+ Add more items</a>
+            <button id="clear-cart-btn" class="text-gray-400 hover:text-red-500 text-xs transition">Clear cart</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Shipping details -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 class="text-lg font-extrabold text-primary mb-5 flex items-center gap-2">
+            <span class="bg-accent text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+            Shipping Details
+          </h2>
+          <form id="order-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                <input type="text" id="first-name" required placeholder="John"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                <input type="text" id="last-name" required placeholder="Doe"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+              <input type="email" id="email" required placeholder="john@example.com"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+              <input type="tel" id="phone" required placeholder="+1 555 000 0000"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Street Address *</label>
+              <input type="text" id="address1" required placeholder="123 Main Street, Apt 4B"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="col-span-2 sm:col-span-1">
+                <label class="block text-sm font-medium text-gray-700 mb-1">City *</label>
+                <input type="text" id="city" required placeholder="New York"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">State / Region *</label>
+                <input type="text" id="state" required placeholder="NY"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">ZIP / Postcode *</label>
+                <input type="text" id="zip" required placeholder="10001"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Country *</label>
+              <select id="country" required
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition">
+                <option value="">Select country…</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="India">India</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Order Notes (optional)</label>
+              <textarea id="notes" rows="3" placeholder="Any special instructions for your order…"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent transition resize-none"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3: Payment notice -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 class="text-lg font-extrabold text-primary mb-4 flex items-center gap-2">
+            <span class="bg-accent text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+            Payment
+          </h2>
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm text-yellow-800">
+            <p class="font-semibold mb-1">💳 Payment via Invoice</p>
+            <p>After placing your order, our team will contact you within 24 hours with a secure payment link via email. Your order will be confirmed once payment is received.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT: Order Summary ── -->
+      <div class="w-full lg:w-96 shrink-0">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-24">
+          <h2 class="text-lg font-extrabold text-primary mb-5">Order Summary</h2>
+
+          <div id="summary-items" class="space-y-3 mb-4"></div>
+
+          <div class="border-t border-gray-100 pt-4 space-y-2 text-sm">
+            <div class="flex justify-between text-gray-500">
+              <span>Subtotal</span>
+              <span id="summary-subtotal">$0.00</span>
+            </div>
+            <div class="flex justify-between text-gray-500">
+              <span>Shipping</span>
+              <span id="summary-shipping" class="text-green-600 font-medium">Free</span>
+            </div>
+            <div class="flex justify-between font-extrabold text-primary text-lg border-t border-gray-100 pt-3 mt-2">
+              <span>Total</span>
+              <span id="summary-total">$0.00</span>
+            </div>
+          </div>
+
+          <!-- Place Order -->
+          <button id="place-order-btn"
+            class="w-full mt-6 bg-accent hover:bg-red-600 text-white font-bold py-4 rounded-full transition shadow-md text-base">
+            Place Order
+          </button>
+          <p id="order-error" class="text-red-500 text-xs mt-3 text-center hidden"></p>
+
+          <!-- Trust -->
+          <div class="mt-5 space-y-2 text-xs text-gray-400 text-center">
+            <p>🔒 Your information is secure</p>
+            <p>🚚 Ships directly to your door</p>
+            <p>🔄 30-day hassle-free returns</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS STATE -->
+  <div id="order-success" class="hidden max-w-lg mx-auto px-6 py-24 text-center">
+    <div class="text-7xl mb-5">🎉</div>
+    <h2 class="text-3xl font-extrabold text-primary mb-3">Order Placed!</h2>
+    <p class="text-gray-600 mb-2">Thank you, <strong id="success-name"></strong>!</p>
+    <p class="text-gray-500 text-sm mb-2">Your order <strong id="success-order-id" class="text-accent"></strong> has been received.</p>
+    <p class="text-gray-500 text-sm mb-8">We'll email you at <strong id="success-email"></strong> with your payment link and order confirmation within 24 hours.</p>
+    <div class="bg-gray-50 rounded-2xl p-5 text-left text-sm text-gray-600 mb-8 border border-gray-100">
+      <p class="font-semibold text-primary mb-2">What happens next?</p>
+      <ol class="space-y-2 list-decimal list-inside">
+        <li>You'll receive a confirmation email shortly</li>
+        <li>Our team sends a secure payment link within 24 hours</li>
+        <li>Once payment confirmed, your items ship directly to you</li>
+        <li>Estimated delivery: 10–25 business days</li>
+      </ol>
+    </div>
+    <a href="shop.html" class="bg-accent hover:bg-red-600 text-white font-bold px-8 py-3 rounded-full transition inline-block">Continue Shopping</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center text-sm mt-10">
+    <p class="text-white font-extrabold text-xl mb-2">Trend<span class="text-accent">Drop</span></p>
+    <p>&copy; 2026 TrendDrop. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

@@ -136,18 +136,17 @@ function renderProduct(p, allProducts) {
     `).join('');
   }
 
-  // Supplier section
-  if (p.supplier && p.supplier.url) {
-    const sec = document.getElementById('supplier-section');
-    sec.classList.remove('hidden');
-    document.getElementById('supplier-moq').textContent  = p.supplier.moq;
-    document.getElementById('supplier-lead').textContent = p.supplier.leadTimeDays;
-    document.getElementById('supplier-link').href        = p.supplier.url;
-  }
+  // NOTE: supplier details (cost, MOQ, source URL) are intentionally NOT shown
+  // to customers. They are used only in internal fulfillment emails.
 
-  // Add to cart
+  // Add to cart — delegates to cart.js
   document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-    showToast(`${p.name} added to cart!`);
+    const item = { id: p.id, name: p.name, price: p.price, emoji: p.emoji, qty: 1 };
+    if (window.Cart) {
+      window.Cart.add(item);
+    } else {
+      showToast(`${p.name} added to cart!`);
+    }
   });
 
   // Wishlist

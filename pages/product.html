@@ -29,7 +29,14 @@
         <li><a href="about.html" class="hover:text-accent transition">About</a></li>
         <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
       </ul>
-      <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
+              <!-- Cart icon -->
+        <a href="checkout.html" class="relative hover:text-accent transition" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-9H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m5-4H9"/>
+          </svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+        </a>
+        <a href="shop.html" class="bg-accent hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition">Shop Now</a>
     </div>
   </nav>
 
@@ -105,16 +112,6 @@
             </button>
           </div>
 
-          <!-- Supplier back-order link -->
-          <div id="supplier-section" class="bg-blue-50 rounded-2xl p-4 text-sm mb-4 hidden">
-            <p class="font-semibold text-blue-800 mb-1">🏭 Source this product</p>
-            <p class="text-blue-600 mb-2">MOQ: <span id="supplier-moq"></span> units · Lead time: <span id="supplier-lead"></span> days</p>
-            <a id="supplier-link" href="#" target="_blank" rel="noopener"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-full transition">
-              View on Alibaba →
-            </a>
-          </div>
-
           <!-- Trust badges -->
           <div class="flex flex-wrap gap-4 text-xs text-gray-500 mt-4">
             <span>🚚 Free shipping over $50</span>
@@ -186,6 +183,7 @@
     <p>&copy; 2026 TrendDrop. All rights reserved.</p>
   </footer>
 
+  <script src="../js/cart.js"></script>
   <script src="../js/product.js"></script>
 </body>
 </html>

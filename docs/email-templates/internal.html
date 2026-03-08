@@ -1,0 +1,98 @@
+<!-- ─────────────────────────────────────────────────────────────────────────
+     TrendDrop — Internal Fulfillment Brief Email
+     Paste this as the "Body (HTML)" in your EmailJS Internal Template.
+     Variables (filled automatically by checkout.js):
+       {{order_id}}      e.g. TD-LK3MN2-ABCD
+       {{order_date}}    e.g. March 8, 2026, 11:42 AM
+       {{brief}}         Full plain-text fulfillment brief (see checkout.js)
+                         This single variable contains:
+                           • Customer name, email, phone
+                           • Full shipping address
+                           • Items: name, qty, sale price, cost price
+                           • Per-item supplier name + Alibaba URL + MOQ
+                           • Order subtotal, your cost, estimated margin
+                           • Step-by-step fulfillment instructions
+──────────────────────────────────────────────────────────────────────────── -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    body { font-family: Inter, Arial, sans-serif; background: #0f0f1a; margin: 0; padding: 0; }
+    .wrapper { max-width: 680px; margin: 30px auto; background: #1a1a2e; border-radius: 16px; overflow: hidden; border: 1px solid #2d2d4e; }
+    .header { background: #12122a; border-bottom: 3px solid #e94560; padding: 24px 36px; display: flex; align-items: center; justify-content: space-between; }
+    .header h1 { margin: 0; font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    .header h1 span { color: #e94560; }
+    .badge { background: #e94560; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 50px; letter-spacing: .08em; text-transform: uppercase; }
+    .body { padding: 32px 36px; color: #d1d5db; font-size: 14px; line-height: 1.6; }
+    .alert-box { background: #e94560; color: #fff; border-radius: 10px; padding: 14px 20px; margin-bottom: 24px; font-size: 13px; font-weight: 600; }
+    .section { margin-bottom: 28px; }
+    .section-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: #6b7280; margin-bottom: 10px; border-bottom: 1px solid #2d2d4e; padding-bottom: 6px; }
+    .meta-row { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .meta-key { color: #9ca3af; font-size: 13px; }
+    .meta-val { color: #f9fafb; font-weight: 600; font-size: 13px; }
+    .brief-box { background: #0f0f1a; border: 1px solid #2d2d4e; border-radius: 10px; padding: 20px 24px; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 12.5px; color: #a3e635; line-height: 1.7; overflow-x: auto; }
+    .steps { counter-reset: step-counter; list-style: none; padding: 0; margin: 0; }
+    .steps li { counter-increment: step-counter; display: flex; gap: 14px; margin-bottom: 14px; }
+    .steps li::before { content: counter(step-counter); background: #e94560; color: #fff; font-weight: 800; font-size: 12px; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .steps li span { color: #d1d5db; font-size: 13px; line-height: 1.6; }
+    .footer { background: #12122a; border-top: 1px solid #2d2d4e; padding: 18px 36px; text-align: center; color: #4b5563; font-size: 11px; }
+    .order-id-chip { display: inline-block; background: #e94560; color: #fff; font-weight: 800; font-size: 15px; padding: 6px 18px; border-radius: 8px; margin-bottom: 20px; letter-spacing: .03em; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Trend<span>Drop</span> · Internal</h1>
+      <span class="badge">🔒 Owner Only</span>
+    </div>
+    <div class="body">
+
+      <div class="alert-box">
+        ⚡ New order received — action required. Place supplier order within 24 hours.
+      </div>
+
+      <div class="section">
+        <div class="section-label">Order Reference</div>
+        <div class="order-id-chip">{{order_id}}</div>
+        <div class="meta-row">
+          <span class="meta-key">Order Date</span>
+          <span class="meta-val">{{order_date}}</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Fulfillment Brief</div>
+        <div class="brief-box">{{brief}}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Fulfillment Steps</div>
+        <ol class="steps">
+          <li><span>Open the Alibaba / supplier URL(s) listed in the brief above.</span></li>
+          <li><span>Confirm product availability and current price (may differ from cost estimate).</span></li>
+          <li><span>Place order using the customer's <strong style="color:#f9fafb;">exact shipping name &amp; address</strong> from the brief. Do NOT use the TrendDrop address.</span></li>
+          <li><span>Note the supplier's order/tracking number once confirmed.</span></li>
+          <li><span>Reply to the customer's confirmation email with the tracking number once available.</span></li>
+          <li><span>Mark order as fulfilled in your records.</span></li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Reminders</div>
+        <div style="font-size:13px;color:#9ca3af;line-height:1.8;">
+          • Customer has been sent a separate confirmation email with their order ID.<br/>
+          • Payment link to be sent to customer within <strong style="color:#f9fafb;">24 hours</strong> of this order.<br/>
+          • Never CC or forward this email — it contains supplier source URLs.<br/>
+          • Questions? Check <code style="background:#0f0f1a;padding:2px 6px;border-radius:4px;color:#a3e635;">data/products.json</code> for full supplier details.
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <p>TrendDrop Internal System — Do not share with customers or third parties.</p>
+      <p style="margin:4px 0 0;">This email was auto-generated by the TrendDrop checkout system.</p>
+    </div>
+  </div>
+</body>
+</html>
